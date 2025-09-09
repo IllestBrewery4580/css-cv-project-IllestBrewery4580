@@ -1,95 +1,157 @@
 body {
-
-  }
+  margin: 0; /* remove default page margins */
+  padding: 0 1rem;
+  font-family: Arial, sans-serif; /* fallback font */
+  background-color: #fdfdfd;
+  color: #333;
+}
 
 /****************   Nav Section **********************/
 nav {
-	
+	display: flex; /* flex parent */
+  justify-content: space-between; /* separate name left, contact link right */
+  align-items: center;
+  background-color: #2c3e50; /* differentiate */
+  color: white;
+  padding: 1rem;
 }
 
 /***********************  Footer Section   **************************/
 footer {
-	
+	display: flex;
+  justify-content: center;
+  background-color: #2c3e50; /* differentiate */
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 /*********** Splash Page ************************/
 header {
-
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(120deg, #2c3e50, #4ca1af, #1abc9c); /* splashy background */
 }
 
 header h1 {
-  
+  font-family: 'Roboto', sans-serif; /* Google font */
+  font-size: 2.5rem;
+  color: #2c3e50;
 }
 
 header img {
+  border-radius: 50%; /* circular headshot */
+  border: 4px solid #2c3e50;
+  max-width: 150px;
+  margin-top: 1rem;
 }
 
 .address {
- 
+  font-style: italic;
+  color: #555;
 }
 
 .tagline {
-  
+  font-weight: bold;
+  color: #f39c12;
 }
 
 /************* Sections ********************/
 hr {
-
+  border: 1px solid #ddd;
+  margin: 2rem 0;
 }
 
 section h3 {
-  
+  font-family: 'Roboto Slab', serif; /* another Google font */
+  color: #2c3e50;
+  margin-top: 2rem;
 }
 
 section dl {
-  
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 0.5rem 1rem;
 }
 
 section ul {
-
+  list-style-type: square;
+  margin-left: 1.5rem;
 }
 
 section a {
-
+  color: #2c3e50;
+  text-decoration: none;
 }
 
 section a:hover {
+  color: #f39c12;
+  text-decoration: underline;
 }
 
 /**************   Projects   *****************/
 .three-col {
-	
+	display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .card img {
-
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;  /* lets margin: auto work */
+  margin: 0 auto 0.5rem;  /* centers image horizontally + adds space below */
 }
 
 .card {
-  
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 300px;
 }
 
 /**************   Responsiveness   *****************/
 @media (max-width: 680px) {
     nav {
-      
+      flex-direction: column;
+      text-align: center;
     }
 
     .three-col {
-      
+      grid-template-columns: 1fr; /* one column layout on mobile */
     }
 }
 
 /**************   Contact Page   *****************/
 .one-col {
-
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 1rem;
 }
 
 input {
-  
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 
 }
 
 textarea {
-   
+   padding: 0.75rem;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 1rem;
+   width: 100%;
+   min-height: 120px; /* bigger than input */
+   resize: vertical; /* let user expand up/down */
+   box-sizing: border-box;
 }
