@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/NOFSrM7b)
 # CSS Resume Assignment
 
-In this assignment, you will style a resume website using CSS. 
+In this assignment, you will style a resume website using CSS. I made a copy of this because I need to put it in to a Google Doc for the class to see.
 
 ---
 
@@ -45,5 +45,6 @@ You are to publish your CV to your own GitHub pages site. This is **NOT** your c
 2. **Provide the link on the class Google sheet** 
 
 The link to the Google sheet is provided in the instructions sheet linked above.
+
 
 # css-cv-project-IllestBrewery4580
