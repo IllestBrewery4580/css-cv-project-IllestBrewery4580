@@ -53,13 +53,15 @@ header img {
 
 .tagline {
   font-weight: bold;
-  color: #f39c12;
+  color: white;
 }
 
 /************* Sections ********************/
 hr {
   border: 1px solid #ddd;
   margin: 2rem 0;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 
 section h3 {
@@ -90,12 +92,40 @@ section a:hover {
 }
 
 /**************   Projects   *****************/
+.projects-section {
+  padding: 3rem 1rem;
+}
+
 .three-col {
 	display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 1rem;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  max-width:: 960px;
+
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+  text-align: left;
+
+  background-color: #c49e6c; /* cork base color */
+  background-image: url('../images/cork-board.png'); /* cork texture */
+  background-repeat: repeat; /* title it so it fills hte whole area */
+  background-size: 300px 300px; /* adjust texture scale */
+  border-radius: 12px; 
+  border: 12px solid #8b5a2b; /* wood-like color */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* outer shadow only */
 }
+
+/* Random rotation for a hand-placed look */
+.three-col .card:nth-child(1) { transform: rotate(-3deg); }
+.three-col .card:nth-child(2) { transform: rotate(2deg); }
+.three-col .card:nth-child(3) { transform: rotate(-1deg); }
+.three-col .card:nth-child(4) { transform: rotate(3deg); }
+.three-col .card:nth-child(5) { transform: rotate(-2deg); }
+.three-col .card:nth-child(6) { transform: rotate(1deg); }
 
 .card img {
   max-width: 100%;
@@ -105,13 +135,46 @@ section a:hover {
 }
 
 .card {
+  position: relative;
   background-color: white;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   border-radius: 8px;
   text-align: left;
-  margin: 0 auto;
+  margin: 2rem auto;
   max-width: 300px;
+
+  overflow: visible; /* allow thumbtack to appear outside */
+
+  /* Gradient border */
+  border: 4px solid transparent; /* thickness of the border */
+  border-image: linear-gradient(120deg, #2c3e50, #4ca1af, #1abc9c) 1;
+
+  /* Shadow for depth */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+  padding: 1rem;
+
+  /* Smooth hover transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Random rotation (will look hand-placed) */
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Thumbtack effect */
+.card::before {
+  content: "";
+  width: 24px;    /* size of the thumbtack head */
+  height: 24px;
+  background: radial-gradient(circle at 30% 30%, #f39c12, #d35400); /* light + shadow for depth */
+  border-radius: 50%; /* round shape */
+  position: absolute;
+  top: -8px;   /* half the height so it sits above card */
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg); /* center above card */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* subtle shadow for 3D feel */
+  z-index: 10; /* make sure it's above the card */
 }
 
 /**************   Responsiveness   *****************/
